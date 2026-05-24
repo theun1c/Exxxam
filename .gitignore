@@ -1,0 +1,10 @@
+# ides
+.vs/
+.vscode/
+.idea/
+
+# build
+build/
+bin/    
+obj/
+
