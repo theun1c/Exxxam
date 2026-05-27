@@ -1,0 +1,38 @@
+create table images (
+	id serial primary key,
+	main_image varchar(100) not null
+);
+
+create table genders (
+	id serial primary key, 
+	name varchar(10) not null
+);
+
+create table clients (
+	id serial primary key, 
+	last_name varchar(100) not null,
+	first_name varchar(100) not null,
+	patronymic varchar(100),
+	birth_date DATE,
+	register_date DATE,
+	email varchar(100) not null, 
+	phone varchar(15) not null,
+	gender_id int references genders(id)
+);
+
+create table services (
+	id serial primary key, 
+	name varchar(200) not null, 
+	cost int not null, 
+	duration_sec int not null,
+	description varchar(100) not null, 
+	discount int,
+	image_id int references images(id)
+);
+
+create table services_clients (
+	id serial primary key, 
+	service_id int references services(id),
+	client_id int references clients(id),
+	start_provide_service timestamp default current_timestamp
+);
