@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace LearnSchoolAvalonia.Models;
+
+public partial class Service
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; } = null!;
+
+    public int Cost { get; set; }
+
+    public int DurationSec { get; set; }
+
+    public string Description { get; set; } = null!;
+
+    public int? Discount { get; set; }
+
+    public int? ImageId { get; set; }
+
+    public virtual Image? Image { get; set; }
+
+    public virtual ICollection<ServicesClient> ServicesClients { get; set; } = new List<ServicesClient>();
+}
