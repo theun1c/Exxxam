@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LearnSchoolAvalonia.Components.ServiceCard">
+      <Border BorderBrush="Gray" BorderThickness="2" Margin="10,10,10,0">          
+          
+      
+        <Grid ColumnDefinitions="80, *" Margin="10">
+            <Image Grid.Column="0" VerticalAlignment="Center" Stretch="UniformToFill" Width="100" Height="100" Source="avares://LearnSchoolAvalonia/Assets/Услуги школы/for company.jpg" Margin="0, 0, 20, 0"/>
+
+            <StackPanel Grid.Column="1" >
+
+
+              <TextBlock FontSize="20">Наименование услуги</TextBlock>
+
+              <StackPanel Orientation="Horizontal" Margin="0, 5">
+                  <TextBlock FontSize="18">800 рублей</TextBlock>   
+                  
+                  <TextBlock FontSize="18" Margin="8, 0, 0, 0">за 30 минут</TextBlock>
+              </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+               
+                <Button Content="редактировать" Background="CadetBlue"/>
+                <Button Content="удалить" Margin="10,0" Background="IndianRed"/>
+            </StackPanel>
+
+            
+         </StackPanel>
+
+        </Grid>
+
+        
+      </Border>
+
+</UserControl>
