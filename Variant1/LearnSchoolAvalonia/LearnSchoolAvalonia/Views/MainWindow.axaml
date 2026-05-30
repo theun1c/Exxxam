@@ -16,11 +16,15 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <StackPanel>
-        <components:ServiceCard/>
-        <components:ServiceCard/>
-        <components:ServiceCard/>
-    </StackPanel>
+    <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding Services}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <components:ServiceCard/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
 
 
 </Window>
